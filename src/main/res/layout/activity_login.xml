@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAlignment="center"
+        android:id="@+id/po"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/l"
+        android:layout_below="@+id/po"
+        android:layout_marginTop="20dp"
+
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:id="@+id/email_l"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+       android:layout_below="@+id/l"
+        android:layout_centerVertical="true"
+       android:id="@+id/ll"
+        app:passwordToggleEnabled="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="numberPassword"
+            android:id="@+id/pass_l"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/ll"
+        android:id="@+id/lll"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_send_black_24dp"
+        android:onClick="llogin"/>
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lll"
+        android:id="@+id/g"
+        android:layout_centerHorizontal="true"
+         ></com.google.android.gms.common.SignInButton>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="forget password ?recover"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:onClick="recover"
+        android:id="@+id/q"
+        android:layout_below="@+id/g"
+        android:layout_marginTop="5dp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="not have account? Registe"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:onClick="not"
+        android:layout_below="@+id/q"
+        android:layout_marginTop="8dp"
+        android:gravity="center"/>
+
+ </RelativeLayout>
